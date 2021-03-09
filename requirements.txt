@@ -1,3 +1,2 @@
 adafruit-circuitpython-dht
-RPI.GPIO
 adafruit-circuitpython-bh1750
