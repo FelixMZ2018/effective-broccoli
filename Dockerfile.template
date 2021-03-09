@@ -1,10 +1,10 @@
 # base-image for python on any machine using a template variable,
 # see more about dockerfile templates here:http://docs.resin.io/pages/deployment/docker-templates
-FROM balenalib/raspberrypi4-64-debian-python	
+FROM balenalib/raspberrypi4-64-python		
 
 # use apt-get if you need to install dependencies
 RUN 	apt-get update && apt-get install -yq \
-		python3-smbus python3-dev libgpiod2 python3-rpi.gpio && \ 
+		python3-smbus python3-dev libgpiod2 python3-rpi.gpio gcc python-dev && \ 
 		python3 -m ensurepip --upgrade && \
 		apt-get clean && rm -rf /var/lib/apt/lists/*
 
